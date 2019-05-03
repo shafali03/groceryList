@@ -52,7 +52,6 @@ function showAction(element, text, value) {
             element.classList.remove('alert');
         }, 3000)
     }
-
 }
 
 //create item 
@@ -72,7 +71,6 @@ function createItem(value) {
                 </a>`
 
     list.appendChild(parent)
-
 }
 
 
@@ -129,12 +127,9 @@ function removeItems() {
     }
 }
 
-
 // remove single item
-
 function removeSingleItem(event) {
     event.preventDefault();
-
 
     // console.log(event.target);
 
@@ -152,13 +147,11 @@ function removeSingleItem(event) {
     }
 }
 
-
 // edit storage
 
 function editsStorage(item) {
     let groceryItems = JSON.parse(localStorage.getItem('groceryList'));
     // console.log(groceryItem);
-
 
     let index = groceryItems.indexOf(item);
 
@@ -166,8 +159,6 @@ function editsStorage(item) {
     groceryItem.splice(index, 1);
     localStorage.removeItem('groceryList');
     localStorage.setItem('groceryList', JSON.stringify(groceryItems));
-
-
 
 }
 
